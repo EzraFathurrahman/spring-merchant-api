@@ -24,7 +24,7 @@ public class MerchantController {
 
     }
     @PostMapping("/create")
-    public MerchantDTO create(@RequestBody MerchantDTO request){
+    public MerchantDTO create( @RequestBody MerchantDTO request){
         final Merchant merchant =merchantService.mapToEntity(request);
         final Merchant result = merchantService.create(merchant);
         return merchantService.mapToDto(result);
